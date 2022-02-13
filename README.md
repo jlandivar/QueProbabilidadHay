@@ -1,8 +1,9 @@
 # ¿Qué Probabilidad Hay?
-Juego con Arduino, display LCD y 7 segmentos \n
+Juego con Arduino, display LCD y 7 segmentos
 Enlace a la presentación: https://www.youtube.com/watch?v=yWKSluvfk8g
 
 ------------
+
 # Miembros
 - Jerry Landívar
 - Sebastián Ruiz
@@ -37,6 +38,33 @@ El dispositivo permite experimentar el juego de azar ¿Qué probabilidad hay? De
 - Mejorar el diseño para que sea más atractivo a la vista y de esta manera llame el interés de los usuarios.
 
 ### Resumen de contenido:
+
+El código funciona mediante una sucesión de 3 estados dentro del loop: pantalla de inicio, selección de número y pantalla final. En cada iteración del loop, se ejecuta únicamente un solo estado. Esto permite la lectura constante de los botones para así poder responder inmediatamente a la acción del usuario.
+```cpp
+void loop(){
+  if (state == 0) {  // Código de la pantalla de inicio
+  }
+  else if (state == 0) {  // Código mostrar pregunta y seleccionar número
+  }
+  else if (state == 0) {  // Código de la pantalla de inicio
+  }
+}
+```
+
+Para detectar el accionamiento de un botón sin contarlo repetidas veces, se utilizó una variable boolena para cada botón que permite responder solamente cuando el botón es SOLTADO (flanco de bajada).
+```cpp
+if (digitalRead(pinBtn)){
+  btn = true;
+} else if (btn){
+  btn = false;
+  // Aquí va el código que se ejecuta al soltar el botón
+}
+```
+
+Para no usar siempre la misma semilla del random se utilizó la librería time.h
+```cpp``
+srand(time(NULL));
+```
 
 | Conexiones de la placa  | Placa  | Prototipo completo  |
 | :------------: | :------------: | :------------: |
