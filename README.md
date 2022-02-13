@@ -22,8 +22,8 @@ El dispositivo permite experimentar el juego de azar ¿Qué probabilidad hay? De
 
 | Nombre            | Cantidad    | Precio (c/u) | Imagen|
 |:-------------------:|:-------------:|:---------------:|:--------------:|
-| Arduino Nano   | 1   | $5             | ![Arduino Nano](https://340ebb34-0a2d-4f84-89c1-df7c55751e77.id.repl.co/imgPartes/Arduino%20Nano.png "Arduino Nano")         |
-| Decodificador BCD a 7 segmentos (7448)         | 2       | $1             | ![Decodificador BCD a 7 segmentos (7448)](https://340ebb34-0a2d-4f84-89c1-df7c55751e77.id.repl.co/imgPartes/Decodificador%20BCD%20a%207%20segmentos.png "Decodificador BCD a 7 segmentos (7448)")        |
+| Arduino Nano   | 1   | $9             | ![Arduino Nano](https://340ebb34-0a2d-4f84-89c1-df7c55751e77.id.repl.co/imgPartes/Arduino%20Nano.png "Arduino Nano")         |
+| Decodificador BCD a 7 segmentos (7448)         | 2       | $1.55           | ![Decodificador BCD a 7 segmentos (7448)](https://340ebb34-0a2d-4f84-89c1-df7c55751e77.id.repl.co/imgPartes/Decodificador%20BCD%20a%207%20segmentos.png "Decodificador BCD a 7 segmentos (7448)")        |
 | Cable jumper de 13 pines 20cm | 1 | $2            | ![Cable jumper de 13 pines 20cm](https://340ebb34-0a2d-4f84-89c1-df7c55751e77.id.repl.co/imgPartes/Cable%20jumper%20de%2013%20pines%2020%20cm.png "Cable jumper de 13 pines 20cm")        |
 | Cables machos hembra          | 4  | $2             | ![Cables machos hembra](https://340ebb34-0a2d-4f84-89c1-df7c55751e77.id.repl.co/imgPartes/Cables%20machos%20hembra.png "Cables machos hembra")            |
 | Display 7 segmentos          | 2  | $1.50             | ![Display 7 segmentos](https://340ebb34-0a2d-4f84-89c1-df7c55751e77.id.repl.co/imgPartes/Display%207%20segmentos.png "Display 7 segmentos")            |
