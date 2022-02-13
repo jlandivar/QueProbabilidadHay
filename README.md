@@ -1,5 +1,5 @@
 # ¿Qué Probabilidad Hay?
-Juego con Arduino, display LCD y 7 segmentos
+Juego con Arduino, display LCD y 7 segmentos \n
 Enlace a la presentación: https://www.youtube.com/watch?v=yWKSluvfk8g
 
 ------------
