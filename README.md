@@ -27,7 +27,7 @@ El dispositivo permite experimentar el juego de azar ¿Qué probabilidad hay? De
 | Cable jumper de 13 pines 20cm | 1 | $2            | ![Cable jumper de 13 pines 20cm](https://340ebb34-0a2d-4f84-89c1-df7c55751e77.id.repl.co/imgPartes/Cable%20jumper%20de%2013%20pines%2020%20cm.png "Cable jumper de 13 pines 20cm")        |
 | Cables machos hembra          | 4  | $2             | ![Cables machos hembra](https://340ebb34-0a2d-4f84-89c1-df7c55751e77.id.repl.co/imgPartes/Cables%20machos%20hembra.png "Cables machos hembra")            |
 | Display 7 segmentos          | 2  | $1.50             | ![Display 7 segmentos](https://340ebb34-0a2d-4f84-89c1-df7c55751e77.id.repl.co/imgPartes/Display%207%20segmentos.png "Display 7 segmentos")            |
-| Display LCD          | 1  | $5             |  ![Display LCD](https://340ebb34-0a2d-4f84-89c1-df7c55751e77.id.repl.co/imgPartes/Display%20LCD.png "Display LCD")           |
+| Display LCD  I2C     | 1  | $7             |  ![Display LCD](https://340ebb34-0a2d-4f84-89c1-df7c55751e77.id.repl.co/imgPartes/Display%20LCD.png "Display LCD")           |
 
 ### Posibles mejoras:
 - Soldar parte del circuito en una baquelita para evitar errores debido a contactos de mala calidad en la protoboard.
