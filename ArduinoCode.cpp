@@ -88,7 +88,7 @@ void loop() {
     }
   }
 
-  if (state == 1){ /*Se procede a mostrar la pregunta y esperar 
+  else if (state == 1){ /*Se procede a mostrar la pregunta y esperar 
                     la selección del numero*/
     if ((millis() - t0) >= tLetra){ //Se desplazan las letras
       lcd.setCursor(0, 0);
@@ -138,7 +138,7 @@ void loop() {
       state = 2;
     }
   }
-  if (state == 2){ //Esperar boton para volver a empezar
+  else if (state == 2){ //Esperar boton para volver a empezar
     if (digitalRead(pinBtnSel)){
       btnSel = true;
     } else if (btnSel){
