@@ -62,7 +62,7 @@ if (digitalRead(pinBtn)){
 ```
 
 Para no usar siempre la misma semilla del random se utilizó la librería time.h
-```cpp``
+```cpp
 srand(time(NULL));
 ```
 
