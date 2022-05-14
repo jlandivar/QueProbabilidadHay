@@ -1,9 +1,10 @@
 #include <LiquidCrystal_I2C.h>
-#include <time.h> //Para la semilla del random
+
 #define pinInicioBus 5
 #define pinBtnUp 3
 #define pinBtnDown 2
 #define pinBtnSel 4
+#define randPin A3
 #define tLetra 300 //tiempo para desplazar las letras
 
 bool btnUp;
@@ -39,8 +40,14 @@ uint8_t iLetra; //indice para mostrar mensajes
 void writeToDisplay(short n, bool display){ /*Pone un numero en 
                                               uno de los dispays
                                               7 segmentos*/
+  
   for (int i = 0; i < 4; i++){
-    digitalWrite(i + pinInicioBus + 4*display, (n >> i&1));
+    if (display){
+    digitalWrite(pinInicioBus + 7 - i, (n >> i&1));
+    }
+    else{
+      digitalWrite(i + pinInicioBus, (n >> i&1));
+    }
   }
 }
 
@@ -67,8 +74,6 @@ void setup() {
   lcd.init();
   lcd.backlight();
   mostrarInicio();
-
-  srand(time(NULL));
 }
 
 void loop() {
@@ -80,10 +85,10 @@ void loop() {
     } else if (btnSel){
       Serial.println("Soltado");
       btnSel = false;
-      int i = rand() % 5;
-      q = questions[i]; //Se elige pregunta al azar
+      q = questions[analogRead(randPin)%5]; //Se elige pregunta al azar
       lcd.clear();
-      writeToDisplay(1, 0); //Se escribe 1 en el primer display
+      writeToDisplay(numSel, 0); //Se escribe numSel en el primer display
+      iLetra = 0; //Para mostrar la pregunta desde el inicio
       state = 1; //Se cambia al siguiente estado
     }
   }
@@ -127,10 +132,21 @@ void loop() {
         writeToDisplay(i%6, 1);
         delay(80);
       }
-      short numRand = (rand() % 6) + 1; 
+      short numRand;
+      if (analogRead(randPin)%2==0) numRand = numSel; //le toca
+      else{
+        int numbers[5];
+        bool offset = false;
+        for (int i=1; i<=6; i++){
+          if (i != numSel) numbers[i-1-offset] = i;
+          else offset = true;
+        }
+        numRand = numbers[analogRead(randPin)%5]; //no le toca
+      }
       writeToDisplay(numRand, 1); //mostrar random en el segundo display
       
       lcd.clear();
+      
       if (numSel == numRand) lcd.print("Haz el reto!");
       else lcd.print("Trata otra vez!");
       lcd.setCursor(0, 1);
@@ -150,5 +166,3 @@ void loop() {
     }
   }
 }
-
-
