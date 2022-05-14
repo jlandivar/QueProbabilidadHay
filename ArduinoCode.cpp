@@ -4,7 +4,7 @@
 #define pinBtnUp 3
 #define pinBtnDown 2
 #define pinBtnSel 4
-#define randPin A3
+#define randPin A3 //Pin analógico desconectado (lectura aleatoria)
 #define tLetra 300 //tiempo para desplazar las letras
 
 bool btnUp;
