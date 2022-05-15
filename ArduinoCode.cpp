@@ -4,7 +4,7 @@
 #define pinBtnUp 3
 #define pinBtnDown 2
 #define pinBtnSel 4
-#define randPin A3 //Pin analógico desconectado (lectura aleatoria)
+#define randPin A3
 #define tLetra 300 //tiempo para desplazar las letras
 
 bool btnUp;
@@ -52,7 +52,7 @@ void writeToDisplay(short n, bool display){ /*Pone un numero en
 }
 
 void mostrarInicio(){
-  lcd.write(0);
+  lcd.write(1);
   lcd.print("Que probabilid-");
   lcd.setCursor(0, 1);
   lcd.print("ad hay...");
@@ -69,10 +69,10 @@ void setup() {
   for (int i = pinInicioBus; i < pinInicioBus + 8; i++){
     pinMode(i, OUTPUT);
   }
-  
-  lcd.createChar(0, signo);
-  lcd.init();
+  lcd.init();                      // initialize the lcd 
   lcd.backlight();
+  lcd.createChar(1, signo);
+  lcd.home();
   mostrarInicio();
 }
 
